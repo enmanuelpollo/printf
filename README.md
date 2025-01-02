@@ -1,24 +1,33 @@
-🚀 42-ft_printf
-🔗 ft_printf: A Recreation of printf in C
-"Mastering formatted output with a custom implementation."
+### 🚀 **42-ft_printf**  
+🔗 **ft_printf**: A Recreation of `printf` in C  
+*"Mastering formatted output with a custom implementation."*  
 
-🌟 What is ft_printf?
-ft_printf is a project from 42 Campus that involves creating a custom version of the standard C library function printf. It provides formatted output functionality, handling a variety of placeholders for strings, integers, pointers, and more.
+---
 
-With ft_printf, you can:
+### 🌟 **What is ft_printf?**  
+**ft_printf** is a project from 42 Campus that involves creating a custom version of the standard C library function `printf`. It provides formatted output functionality, handling a variety of placeholders for strings, integers, pointers, and more.  
 
-Print various data types using custom formatting.
-Extend its functionality to meet specific requirements.
-Enhance your understanding of variadic functions and low-level I/O operations in C.
-🛠️ How it Works
-Core Concepts
-Format Specifiers: Handles placeholders like %c, %s, %d, %p, etc., to output different data types.
-Variadic Arguments (<stdarg.h>): Allows functions to accept a variable number of arguments using va_list, va_start, va_arg, and va_end.
-Custom I/O Functions: Utilizes low-level I/O like write() for efficient output.
-🧩 ft_printf Step-by-Step
-1️⃣ Parsing and Processing
-The main function, ft_printf, iterates through the format string:
+With **ft_printf**, you can:
+- Print various data types using custom formatting.
+- Extend its functionality to meet specific requirements.
+- Enhance your understanding of variadic functions and low-level I/O operations in C.
 
+---
+
+### 🛠️ **How it Works**  
+
+#### **Core Concepts**  
+- **Format Specifiers**: Handles placeholders like `%c`, `%s`, `%d`, `%p`, etc., to output different data types.  
+- **Variadic Arguments (`<stdarg.h>`)**: Allows functions to accept a variable number of arguments using `va_list`, `va_start`, `va_arg`, and `va_end`.  
+- **Custom I/O Functions**: Utilizes low-level I/O like `write()` for efficient output.  
+
+---
+
+### 🧩 **ft_printf Step-by-Step**  
+
+#### 1️⃣ **Parsing and Processing**  
+The main function, `ft_printf`, iterates through the format string:  
+```c
 int	ft_printf(char const *str, ...)
 {
 	va_list va;
@@ -36,6 +45,7 @@ int	ft_printf(char const *str, ...)
 	va_end(va);
 	return (counter);
 }
+```
 If % is found, it processes the specifier (ft_format).
 Otherwise, it prints the character directly.
 2️⃣ Handling Specifiers
