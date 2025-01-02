@@ -46,6 +46,22 @@ int	ft_printf(char const *str, ...)
 	return (counter);
 }
 ```
+#### 2️⃣ Handling Specifiers
+The helper function ft_format matches the format specifier and calls the appropriate function:
+```c
+void	ft_format(va_list va, char *str, size_t *counter)
+{
+	if (*str == 'c') ft_putchar_pf(va_arg(va, int), counter);
+	else if (*str == 's') ft_putstr_pf(va_arg(va, char *), counter);
+	else if (*str == 'p') ft_putptr_pf(va_arg(va, void *), counter);
+	else if (*str == 'i' || *str == 'd') ft_putnbr_pf(va_arg(va, int), counter);
+	else if (*str == 'u') ft_putuint_pf(va_arg(va, unsigned int), counter);
+	else if (*str == 'x' || *str == 'X') {
+		char *base = (*str == 'x') ? HEX_LOW_BASE : HEX_UPP_BASE;
+		ft_puthex_pf(va_arg(va, unsigned int), counter, base);
+	} else if (*str == '%') ft_putchar_pf('%', counter);
+}
+```
 If % is found, it processes the specifier (ft_format).
 Otherwise, it prints the character directly.
 2️⃣ Handling Specifiers
