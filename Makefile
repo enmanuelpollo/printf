@@ -3,7 +3,7 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: adiaz-be <adiaz-be@student.42malaga.c      +#+  +:+       +#+         #
+#    By: ealmonte <ealmonte@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/13 15:40:29 by adiaz-be          #+#    #+#              #
 #    Updated: 2022/10/13 15:40:33 by adiaz-be         ###   ########.fr        #
